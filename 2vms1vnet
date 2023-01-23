@@ -1,6 +1,6 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
-    "contentVersion": "1.0.0.1",
+    "contentVersion": "1.0.0.2",
     "parameters": {
         "virtualMachines_vm01_name": {
             "defaultValue": "vm01",
@@ -67,7 +67,7 @@
                             "sourceAddressPrefixes": [],
                             "destinationAddressPrefixes": []
                         }
-                        
+         
                     },
                     {
                         "name": "SSH",
@@ -75,6 +75,24 @@
                             "protocol": "TCP",
                             "sourcePortRange": "*",
                             "destinationPortRange": "22",
+                            "sourceAddressPrefix": "*",
+                            "destinationAddressPrefix": "*",
+                            "access": "Allow",
+                            "priority": 301,
+                            "direction": "Inbound",
+                            "sourcePortRanges": [],
+                            "destinationPortRanges": [],
+                            "sourceAddressPrefixes": [],
+                            "destinationAddressPrefixes": []
+                        }
+                        
+                    },
+                                      {
+                        "name": "HTTP",
+                        "properties": {
+                            "protocol": "TCP",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "80",
                             "sourceAddressPrefix": "*",
                             "destinationAddressPrefix": "*",
                             "access": "Allow",
@@ -254,7 +272,7 @@
             },
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "Standard_B1s"
+                    "vmSize": "Standard_B4ms"
                 },
                 "storageProfile": {
                     "imageReference": {
@@ -308,7 +326,7 @@
             },
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "Standard_B1s"
+                    "vmSize": "Standard_B4ms"
                 },
                 "storageProfile": {
                     "imageReference": {
