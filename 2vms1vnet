@@ -47,7 +47,7 @@
             "name": "[parameters('networkSecurityGroups_vm01_nsg_name')]",
             "location": "[resourceGroup().location]",
             "tags": {
-                "BeardSite": "[resourceGroup().location]"
+                "newsite": "[resourceGroup().location]"
             },
             "properties": {
                 "securityRules": [
@@ -96,7 +96,7 @@
             "name": "[parameters('networkSecurityGroups_vm02_nsg_name')]",
             "location": "[resourceGroup().location]",
             "tags": {
-                "BeardSite": "[resourceGroup().location]"
+                "newsite": "[resourceGroup().location]"
             },
             "properties": {
                 "securityRules": [
@@ -177,7 +177,7 @@
             "name": "[parameters('publicIPAddresses_vm01_ip_name')]",
             "location": "[resourceGroup().location]",
             "tags": {
-                "BeardSite": "[resourceGroup().location]"
+                "newsite": "[resourceGroup().location]"
             },
             "sku": {
                 "name": "Basic",
@@ -197,7 +197,7 @@
             "name": "[parameters('publicIPAddresses_vm02_ip_name')]",
             "location": "[resourceGroup().location]",
             "tags": {
-                "BeardSite": "[resourceGroup().location]"
+                "newsite": "[resourceGroup().location]"
             },
             "sku": {
                 "name": "Basic",
@@ -217,7 +217,7 @@
             "name": "[parameters('virtualNetworks_vnet_name')]",
             "location": "[resourceGroup().location]",
             "tags": {
-                "BeardSite": "[resourceGroup().location]"
+                "newsite": "[resourceGroup().location]"
             },
             "properties": {
                 "addressSpace": {
@@ -250,7 +250,7 @@
                 "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_vm01889_name'))]"
             ],
             "tags": {
-                "BeardSite": "[resourceGroup().location]"
+                "newsite": "[resourceGroup().location]"
             },
             "properties": {
                 "hardwareProfile": {
@@ -304,7 +304,7 @@
                 "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_vm02859_name'))]"
             ],
             "tags": {
-                "BeardSite": "[resourceGroup().location]"
+                "newsite": "[resourceGroup().location]"
             },
             "properties": {
                 "hardwareProfile": {
@@ -374,7 +374,7 @@
                 "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_vm01_nsg_name'))]"
             ],
             "tags": {
-                "BeardSite": "[resourceGroup().location]"
+                "newsite": "[resourceGroup().location]"
             },
             "properties": {
                 "ipConfigurations": [
@@ -415,7 +415,7 @@
                 "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_vm02_nsg_name'))]"
             ],
             "tags": {
-                "BeardSite": "[resourceGroup().location]"
+                "newsite": "[resourceGroup().location]"
             },
             "properties": {
                 "ipConfigurations": [
