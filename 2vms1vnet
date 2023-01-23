@@ -1,6 +1,6 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
-    "contentVersion": "1.0.0.2",
+    "contentVersion": "1.0.0.0",
     "parameters": {
         "virtualMachines_vm01_name": {
             "defaultValue": "vm01",
@@ -67,7 +67,7 @@
                             "sourceAddressPrefixes": [],
                             "destinationAddressPrefixes": []
                         }
-         
+                        
                     },
                     {
                         "name": "SSH",
@@ -79,24 +79,6 @@
                             "destinationAddressPrefix": "*",
                             "access": "Allow",
                             "priority": 301,
-                            "direction": "Inbound",
-                            "sourcePortRanges": [],
-                            "destinationPortRanges": [],
-                            "sourceAddressPrefixes": [],
-                            "destinationAddressPrefixes": []
-                        }
-                        
-                    },
-                                      {
-                        "name": "HTTP",
-                        "properties": {
-                            "protocol": "TCP",
-                            "sourcePortRange": "*",
-                            "destinationPortRange": "80",
-                            "sourceAddressPrefix": "*",
-                            "destinationAddressPrefix": "*",
-                            "access": "Allow",
-                            "priority": 310,
                             "direction": "Inbound",
                             "sourcePortRanges": [],
                             "destinationPortRanges": [],
